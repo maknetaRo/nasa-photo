@@ -41,8 +41,15 @@ function setTime() {
   let hourFormatted = ("0" + hour).slice(-2);
   let minutes = date.getMinutes();
   let minutesFormatted = ("0" + minutes).slice(-2);
-  let time = `${hourFormatted}:${minutesFormatted}`;
-  return { hour: hourFormatted, minutes: minutesFormatted, time: time };
+  let seconds = date.getSeconds();
+  let secondsFormatted = ("0" + seconds).slice(-2);
+  let time = `${hourFormatted}:${minutesFormatted}:${secondsFormatted}`;
+  return {
+    hour: hourFormatted,
+    minutes: minutesFormatted,
+    seconds: secondsFormatted,
+    time: time,
+  };
 }
 
 function displayTime() {
