@@ -50,7 +50,9 @@ body {
   margin: 0 auto;
   position: relative;
 }
-
+.title {
+  padding-top: 1rem;
+}
 .text {
   padding: 1rem 2rem;
   line-height: 1.5;
