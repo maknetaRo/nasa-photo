@@ -29,7 +29,7 @@ function getResult() {
 }
 
 function displayResult(result) {
-  document.body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3)), url(${result.url})`;
+  document.body.style.backgroundImage = `url(${result.url})`;
   text.innerHTML = result.explanation;
   title.innerHTML = result.title;
 }
