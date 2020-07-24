@@ -54,13 +54,12 @@ function setTime() {
 
 function displayTime() {
   let time = setTime();
-  console.log(time);
   let elemH1 = document.createElement("H1");
   elemH1.innerText = time.time;
   dateDiv.appendChild(elemH1);
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  displayTime();
+document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(setTime(), 1000);
   getResult();
 });
