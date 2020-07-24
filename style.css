@@ -50,9 +50,6 @@ body {
   margin: 0 auto;
   position: relative;
 }
-.title {
-  padding-top: 1rem;
-}
 
 .text {
   padding: 1rem 2rem;
@@ -70,6 +67,8 @@ body {
   color: seashell;
   font-size: 1rem;
   letter-spacing: 1px;
+  display: inline-flex;
+  justify-content: space-between;
 }
 .btn:hover {
   transform: scale(1.3);

@@ -3,7 +3,6 @@ const description = document.querySelector(".description");
 const btn = document.querySelector(".btn");
 const cross = document.querySelector(".cross");
 const text = document.querySelector(".text");
-const title = document.querySelector(".title");
 
 btn.addEventListener("click", () => {
   btn.style.display = "none";
@@ -31,7 +30,7 @@ function getResult() {
 function displayResult(result) {
   document.body.style.backgroundImage = `url(${result.url})`;
   text.innerHTML = result.explanation;
-  title.innerHTML = result.title;
+  btn.innerHTML = result.title;
 }
 
 const setTime = setInterval(() => {
