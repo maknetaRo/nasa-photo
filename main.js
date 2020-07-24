@@ -1,4 +1,4 @@
-const dateDiv = document.querySelector(".date");
+const timeDiv = document.querySelector(".time");
 const description = document.querySelector(".description");
 const btn = document.querySelector(".btn");
 const cross = document.querySelector(".cross");
@@ -35,31 +35,13 @@ function displayResult(result) {
   title.innerHTML = result.title;
 }
 
-function setTime() {
-  let date = new Date();
-  let hour = date.getHours();
-  let hourFormatted = ("0" + hour).slice(-2);
-  let minutes = date.getMinutes();
-  let minutesFormatted = ("0" + minutes).slice(-2);
-  let seconds = date.getSeconds();
-  let secondsFormatted = ("0" + seconds).slice(-2);
-  let time = `${hourFormatted}:${minutesFormatted}:${secondsFormatted}`;
-  return {
-    hour: hourFormatted,
-    minutes: minutesFormatted,
-    seconds: secondsFormatted,
-    time: time,
-  };
-}
-
-function displayTime() {
-  let time = setTime();
-  let elemH1 = document.createElement("H1");
-  elemH1.innerText = time.time;
-  dateDiv.appendChild(elemH1);
-}
+const setTime = setInterval(() => {
+  let now = moment();
+  let clock = now.format("HH:mm:ss");
+  timeDiv.textContent = clock;
+}, 1000);
 
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(setTime(), 1000);
+  setTime;
   getResult();
 });
