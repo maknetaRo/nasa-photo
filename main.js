@@ -5,7 +5,6 @@ const cross = document.querySelector(".cross");
 const text = document.querySelector(".text");
 const title = document.querySelector(".title");
 
-description.style.display = "none";
 btn.addEventListener("click", () => {
   btn.style.display = "none";
   description.style.display = "block";
