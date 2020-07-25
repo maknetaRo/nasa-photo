@@ -4,6 +4,7 @@ const btn = document.querySelector(".btn");
 const cross = document.querySelector(".cross");
 const text = document.querySelector(".text");
 const title = document.querySelector(".title");
+const dateDiv = document.querySelector(".date");
 
 btn.addEventListener("click", () => {
   btn.style.display = "none";
@@ -41,7 +42,13 @@ const setTime = setInterval(() => {
   timeDiv.textContent = clock;
 }, 1000);
 
+const setDate = () => {
+  let day = moment().format("dddd, DD MMMM YYYY");
+  dateDiv.textContent = day;
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   setTime;
   getResult();
+  setDate();
 });

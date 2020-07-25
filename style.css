@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  color: seashell;
+  color: #dcdcdc;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -32,6 +32,10 @@ body {
   padding-top: 3rem;
   flex: 1;
 }
+.date {
+  padding-bottom: 1rem;
+  font-size: 5vh;
+}
 .time {
   padding-bottom: 2rem;
   font-size: 14vh;
@@ -40,6 +44,9 @@ body {
 @media screen and (max-width: 760px) {
   .time {
     font-size: 8.5vh;
+  }
+  .date {
+    font-size: 1rem;
   }
 }
 
@@ -84,7 +91,7 @@ body {
   padding-top: 0.25rem;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-  background: rgb(0, 0, 0);
+
   cursor: pointer;
 }
 .cross:hover {
