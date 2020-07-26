@@ -38,16 +38,18 @@ function displayVideo(result) {
   video.setAttribute("controls", "controls");
   video.classList.add("video");
   video.src = `${result.url}`;
+
+  videoContainer.appendChild(video);
 }
 
 function displayResult(result) {
   if (`${result.media_type}` !== "video") {
     document.body.style.backgroundImage = `url(${result.url})`;
-  } else if (`${result.media_type}` === "video") {
+  } else {
     displayVideo(result);
   }
-
   btn.innerHTML = result.title;
+
   text.innerHTML = result.explanation;
   title.innerHTML = result.title;
 }
